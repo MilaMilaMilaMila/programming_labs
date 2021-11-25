@@ -74,7 +74,6 @@ void scanfValue(uint1024_t *x, char number[])
 
     int lenght = strlen(number);
 
-    // проверка на ведущие нули
     if(number[0] == '0' && lenght > 1)
     {
         printf("Wrong number format.");
@@ -85,7 +84,6 @@ void scanfValue(uint1024_t *x, char number[])
     {
         digit = number[i];
 
-        // проверка на не цифры
         if(digit > '9' || digit < '0')
         {
             printf("Wrong number format.");
@@ -108,7 +106,6 @@ void scanfValue(uint1024_t *x, char number[])
             partCnt--;
         }
 
-        // проверка, что число слишком большое
         if(partCnt < 0)
         {
             printf("Too large number.");
